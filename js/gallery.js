@@ -89,8 +89,8 @@ function createMarkup(array) {
 
 function handleImageClick(event) {
   event.preventDefault();
-  if (!event.target === event.currentTarget) {
-    return;
+  if (event.target.nodeName !== "IMG") {
+        return;
   };
   
   const currentImage = event.target;
